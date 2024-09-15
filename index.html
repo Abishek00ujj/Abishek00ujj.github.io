@@ -7,15 +7,16 @@
     <link rel="icon" type="image/png" href="./asserts/css/img/profile.jpg" style="border-radius:50%;"/>
     <title>Document</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
         }
         html{
-            background: color f 5f 5f 5px;
+          background-image: url("background.webp");
             width: 100vw;
             height: 100vh;
+            color: white;
+            animation: 1s animate;
         }
         .section1 {
             position:sticky;
@@ -23,12 +24,13 @@
             top: 0;
             height: 10rem;
             width: 100vw;
-            background: #77A1D3;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            /* From https://css.glass */
+background: rgba(255, 255, 255, 0.25);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(2.5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 
             display: flex;
             justify-content:space-between;
@@ -36,7 +38,15 @@
             box-shadow: 0px 4px 15px rgb(0, 0, 0);
             border-radius: 10px;
         }
+        @keyframes animate {
+            from {
+                transform: translate(-100%);
+            }
 
+            to {
+                transform: translate(0%);
+            }
+        }
         .profile-image {
             height: 150px;
             width: 150px;
@@ -70,28 +80,36 @@
             font-size: large;
             text-shadow: 1px 2px 5px rgb(0, 0, 0);
         }
-
         table,
         td,
         th,
         tr {
 
-            border: 1px solid black;
+            border: 2px solid rgb(255, 255, 255);
             border-collapse: collapse;
-            padding: 10px;
+            padding: 5px;
+            border-radius: 4px;
         }
         td {
             text-align: center;
         }
 
         .section2 {
+          width: 80%;
             padding-top:30px;
-            margin: 0 10%;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .section3 {
+          width: 80%;
             padding-top:30px;
-            margin-left:20px ;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .section4 {
@@ -117,8 +135,6 @@
             position: sticky;
             bottom: 0;
             color: aliceblue;
-            widht:100%;
-            height:5%;
                 }
             footer>a{
                 padding-right: 10px;
@@ -219,7 +235,7 @@
 }
 a{
   text-decoration: none;
-  color:#050505;
+  color:#fffcfc;
 }
 button {
   margin: 15px;
@@ -228,17 +244,17 @@ button {
   font-size: 18px;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #1b806f;
+  color: #ffffff;
   background: transparent;
   cursor: pointer;
   transition: ease-out 0.5s;
-  border: 2px solid  #1b806f;
+  border: 2px solid  #ffffff;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #050505;
+  box-shadow: inset 0 0 0 0 #ffffff;
 }
 button:hover {
-  color: white;
-  box-shadow: inset 0 -100px 0 0  #1b806f;;
+  color: #1b806f;
+  box-shadow: inset 0 -100px 0 0 #1b806f;
 }
 
 button:active {
@@ -254,7 +270,7 @@ button:active {
 <body>
     <div class="section1">
         <div class="profile-image">
-            <img src="profile.jpg">
+            <img src="./asserts/css/img/profile.jpg">
         </div>
         <div class="profile-data">
             <h3>ABISHEK S</h3>
